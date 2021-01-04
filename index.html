@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Description" content="Krunch — clean and flexible template">
+
+  <title>Krunch Template</title>
+
+  <link rel="stylesheet" href="assets/css/index.css">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js', { scope: document.location.pathname });
+    }
+
+    (function () {
+      var loadFont=function(a){var b=document.createElement('link');b.href=a,b.rel='stylesheet',b.media='only x',b.onload=function(){b.removeAttribute('media')},document.getElementsByTagName('head')[0].appendChild(b)};
+
+      loadFont('https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800|Open+Sans:300,300i,400,400i,600,700');
+    })();
+  </script>
+
+</head>
+<body>
+
+  <header class="header js-header">
+    <div class="l-container header__container">
+  
+      <a href="#" class="header__logo">Krunch</a>
+  
+      <button class="header__toggle js-nav-toggle" type="button" aria-label="Toggle menu">
+        <svg class="u-icon">
+          <use xlink:href="assets/icons.svg#icon-menu" />
+        </svg>
+      </button>
+  
+      <nav class="nav js-nav">
+        <a href="#home" class="nav__item">Home</a>
+        <a href="#about" class="nav__item">About</a>
+        <a href="#portfolio" class="nav__item">Works</a>
+        <a href="#reviews" class="nav__item">Testimonial</a>
+        <a href="#services" class="nav__item">Services</a>
+        <a href="#team" class="nav__item">Team</a>
+        <a href="#latest" class="nav__item">Blog</a>
+        <a href="#contact" class="nav__item">Contact</a>
+      </nav>
+  
+    </div>
+  </header>
+  
+
+  <main>
+  <div class="hero" id="home" style="background-image: url('assets/img/hero/background.jpg')">
+    <div class="l-container">
+      <div class="hero__content">
+  
+        <h1 class="hero__title">Clean and Flexible Template</h1>
+  
+        <p class="hero__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+  
+        <div class="hero__actions">
+          <a href="" class="btn btn--fill">Download Now</a>
+          <a href="#services" class="btn btn--outlined">View Features</a>
+        </div>
+  
+      </div>
+    </div>
+  
+    <a href="#about" class="hero__arrow" aria-label="Scroll to content">
+      <svg class="u-icon">
+        <use xlink:href="assets/icons.svg#icon-arrow-down" />
+      </svg>
+    </a>
+  </div>
+  
+  <section class="l-section about" id="about" tabindex="-1">
+  
+    <div class="box-title l-content-m">
+      <h2 class="box-title__heading">About Us</h2>
+      <div class="box-title__caption">Sed do eiusmod tempor incididunt ut labore et dolore</div>
+    </div>
+  
+    <div class="l-container about__container">
+  
+      <div class="about__text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p>Loremipsumdolorsitametconsecteturadipisicingelitseddoeiusmodtemporincididuntutlaboreetdoloremagnaaliqua.Utenimadminimveniamquisnostrudexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+  
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+      </div>
+  
+      <div class="about__image">
+        <img src="assets/img/about/pencils.jpg" alt="">
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <section class="l-section portfolio" id="portfolio">
+  
+    <div class="box-title l-content-m">
+      <h2 class="box-title__heading">Portfolio</h2>
+      <div class="box-title__caption">An eye for detail makes our works beautiful.</div>
+    </div>
+  
+    <ul class="portfolio__nav l-content-m">
+  
+      <li class="portfolio__nav-li">
+        <button type="button" class="portfolio__nav-item js-portfolio-control" data-filter="all">All</button>
+      </li>
+  
+      <li class="portfolio__nav-li">
+        <button type="button" class="portfolio__nav-item js-portfolio-control" data-filter=".cat-brand">Brand</button>
+      </li>
+  
+      <li class="portfolio__nav-li">
+        <button type="button" class="portfolio__nav-item js-portfolio-control" data-filter=".cat-design">Design</button>
+      </li>
+  
+      <li class="portfolio__nav-li">
+        <button type="button" class="portfolio__nav-item js-portfolio-control" data-filter=".cat-motion">Motion</button>
+      </li>
+  
+    </ul>
+  
+    <div class="portfolio__grid js-mix-it-up">
+  
+      <a href="/" class="portfolio__grid-item" aria-label="Graphic Designer">
+        <img src="assets/img/portfolio/pic-01.jpg" class="portfolio__grid-image" alt="" data-object-fit="cover">
+  
+        <div class="portfolio__grid-meta">
+          <div class="portfolio__grid-profession">Graphic Designer</div>
+          <div class="portfolio__grid-tags">web/mobile</div>
+        </div>
+      </a>
+  
+      <a href="/" class="portfolio__grid-item cat-design cat-motion" aria-label="Graphic Designer">
+        <img src="assets/img/portfolio/pic-02.jpg" class="portfolio__grid-image" alt="" data-object-fit="cover">
+  
+        <div class="portfolio__grid-meta">
+          <div class="portfolio__grid-profession">Graphic Designer</div>
+          <div class="portfolio__grid-tags">web/mobile</div>
+        </div>
+      </a>
+  
+      <a href="/" class="portfolio__grid-item cat-design cat-motion" aria-label="Graphic Designer">
+        <img src="assets/img/portfolio/pic-03.jpg" class="portfolio__grid-image" alt="" data-object-fit="cover">
+  
+        <div class="portfolio__grid-meta">
+          <div class="portfolio__grid-profession">Graphic Designer</div>
+          <div class="portfolio__grid-tags">web/mobile</div>
+        </div>
+      </a>
+  
+      <a href="/" class="portfolio__grid-item cat-brand" aria-label="Graphic Designer">
+        <img src="assets/img/portfolio/pic-04.jpg" class="portfolio__grid-image" alt="" data-object-fit="cover">
+  
+        <div class="portfolio__grid-meta">
+          <div class="portfolio__grid-profession">Graphic Designer</div>
+          <div class="portfolio__grid-tags">web/mobile</div>
+        </div>
+      </a>
+  
+      <a href="/" class="portfolio__grid-item cat-motion" aria-label="Graphic Designer">
+        <img src="assets/img/portfolio/pic-05.jpg" class="portfolio__grid-image" alt="" data-object-fit="cover">
+  
+        <div class="portfolio__grid-meta">
+          <div class="portfolio__grid-profession">Graphic Designer</div>
+          <div class="portfolio__grid-tags">web/mobile</div>
+        </div>
+      </a>
+  
+      <a href="/" class="portfolio__grid-item cat-brand" aria-label="Graphic Designer">
+        <img src="assets/img/portfolio/pic-06.jpg" class="portfolio__grid-image" alt="" data-object-fit="cover">
+  
+        <div class="portfolio__grid-meta">
+          <div class="portfolio__grid-profession">Graphic Designer</div>
+          <div class="portfolio__grid-tags">web/mobile</div>
+        </div>
+      </a>
+  
+    </div>
+  
+    <div class="portfolio__contact l-content-m">
+      <h2 class="portfolio__contact-title">Have a Any Projects?</h2>
+  
+      <button class="btn btn--outlined portfolio__contact-btn" data-scroll-to=".contact">Contact Now</button>
+    </div>
+  
+  </section>
+  
+  <section class="reviews" id="reviews" style="background-image: url('assets/img/reviews/background.jpg')">
+    <div class="l-content-m l-section">
+  
+      <div class="box-title box-title--inverted reviews__title">
+        <h2 class="box-title__heading">Testimonials</h2>
+      </div>
+  
+      <div class="reviews__items js-reviews-slider">
+  
+        <div class="reviews__item">
+          <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <span class="reviews__author">Howard K. Stern</span>
+        </div>
+  
+        <div class="reviews__item">
+          <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <span class="reviews__author">Howard K. Stern</span>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  <section class="l-section services" id="services">
+  
+    <div class="box-title l-content-m">
+      <h2 class="box-title__heading">Services</h2>
+      <div class="box-title__caption">An eye for detail makes our works beautiful.</div>
+    </div>
+  
+    <div class="services__items l-container">
+  
+      <div class="services__item">
+  
+        <a href="#" class="services__head">
+          <div class="services__icon">
+            <svg class="u-icon">
+              <use xlink:href="assets/icons.svg#icon-desktop" />
+            </svg>
+          </div>
+  
+          <h3 class="services__title">Web Design</h3>
+        </a>
+  
+        <p class="services__text">Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+  
+      </div>
+  
+      <div class="services__item">
+  
+        <a href="#" class="services__head">
+          <div class="services__icon">
+            <svg class="u-icon">
+              <use xlink:href="assets/icons.svg#icon-code" />
+            </svg>
+          </div>
+  
+          <h3 class="services__title">Web development</h3>
+        </a>
+  
+        <p class="services__text">Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+  
+      </div>
+  
+      <div class="services__item">
+  
+        <a href="#" class="services__head">
+          <div class="services__icon">
+            <svg class="u-icon">
+              <use xlink:href="assets/icons.svg#icon-tablet" />
+            </svg>
+          </div>
+  
+          <h3 class="services__title">Apps design</h3>
+        </a>
+  
+        <p class="services__text">Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+  
+      </div>
+  
+      <div class="services__item">
+  
+        <a href="#" class="services__head">
+          <div class="services__icon">
+            <svg class="u-icon">
+              <use xlink:href="assets/icons.svg#icon-camera" />
+            </svg>
+          </div>
+  
+          <h3 class="services__title">Photography</h3>
+        </a>
+  
+        <p class="services__text">Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+  
+      </div>
+  
+      <div class="services__item">
+  
+        <a href="#" class="services__head">
+          <div class="services__icon">
+            <svg class="u-icon">
+              <use xlink:href="assets/icons.svg#icon-tripadvisor" />
+            </svg>
+          </div>
+  
+          <h3 class="services__title">Branding</h3>
+        </a>
+  
+        <p class="services__text">Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+  
+      </div>
+  
+      <div class="services__item">
+  
+        <a href="#" class="services__head">
+          <div class="services__icon">
+            <svg class="u-icon">
+              <use xlink:href="assets/icons.svg#icon-mixcloud" />
+            </svg>
+          </div>
+  
+          <h3 class="services__title">Hosting</h3>
+        </a>
+  
+        <p class="services__text">Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <section class="l-section team" id="team">
+  
+    <div class="box-title l-content-m">
+      <h2 class="box-title__heading">Awesome team</h2>
+      <div class="box-title__caption">An eye for detail makes our works beautiful.</div>
+    </div>
+  
+    <div class="team__items l-container">
+  
+      <div class="team__item">
+        <div class="team__photo-container">
+          <img src="assets/img/team/pic-01.jpg" alt="" class="team__photo">
+  
+          <div class="team__photo-meta">
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-facebook" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-twitter" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-instagram" />
+              </svg>
+            </button>
+  
+          </div>
+        </div>
+  
+        <div class="team__author">
+          <h3 class="team__author-name">
+            <a href="#">Michael thomas</a>
+          </h3>
+          <p class="team__profession">Creative Director</p>
+        </div>
+      </div>
+  
+      <div class="team__item">
+        <div class="team__photo-container">
+          <img src="assets/img/team/pic-02.jpg" alt="" class="team__photo">
+  
+          <div class="team__photo-meta">
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-facebook" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-twitter" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-instagram" />
+              </svg>
+            </button>
+  
+          </div>
+        </div>
+  
+        <div class="team__author">
+          <h3 class="team__author-name">
+            <a href="#">Laurence benson</a>
+          </h3>
+          <p class="team__profession">Programmer</p>
+        </div>
+      </div>
+  
+      <div class="team__item">
+        <div class="team__photo-container">
+          <img src="assets/img/team/pic-03.jpg" alt="" class="team__photo">
+  
+          <div class="team__photo-meta">
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-facebook" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-twitter" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-instagram" />
+              </svg>
+            </button>
+  
+          </div>
+        </div>
+  
+        <div class="team__author">
+          <h3 class="team__author-name">
+            <a href="#">Robert fields</a>
+          </h3>
+          <p class="team__profession">Designer</p>
+        </div>
+      </div>
+  
+      <div class="team__item">
+        <div class="team__photo-container">
+          <img src="assets/img/team/pic-04.jpg" alt="" class="team__photo">
+  
+          <div class="team__photo-meta">
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-facebook" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-twitter" />
+              </svg>
+            </button>
+  
+            <button type="button" class="team__photo-link">
+              <svg class="u-icon">
+                <use xlink:href="assets/icons.svg#icon-instagram" />
+              </svg>
+            </button>
+  
+          </div>
+        </div>
+  
+        <div class="team__author">
+          <h3 class="team__author-name">
+            <a href="#">Adam hines</a>
+          </h3>
+          <p class="team__profession">Designer</p>
+        </div>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <section class="presentation" style="background-image: url('assets/img/presentation/background.jpg')">
+    <h2 class="presentation__heading">Video presentation</h2>
+  
+    <div class="l-content-m">
+  
+      <a href="https://vimeo.com/192147860" class="presentation__play js-popup-video" aria-label="Open Video Presentation">
+        <svg class="u-icon">
+          <use xlink:href="assets/icons.svg#icon-play" />
+        </svg>
+      </a>
+  
+      <p class="presentation__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed  eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  
+      <a href="#" class="btn btn--fill presentation__action">Download Now</a>
+  
+    </div>
+  </section>
+  
+  <section class="l-section latest" id="latest">
+  
+    <div class="box-title l-content-m">
+      <h2 class="box-title__heading">Latest news</h2>
+      <div class="box-title__caption">An eye for detail makes our works beautiful.</div>
+    </div>
+  
+    <div class="latest__items l-container">
+  
+      <div class="latest__item">
+        <a href="#" class="latest__image-wrap" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/latest/pic-01.jpg" alt="" class="latest__image">
+        </a>
+  
+        <a href="#" class="latest__title">Eiusmod tempor labore aliqua</a>
+  
+        <p class="latest__date">18 August 2016</p>
+  
+        <p class="latest__text">Lorem ipsum dolor sit amet, adipisicing elit, sed labore et dolore magna aliqua. Ut enim ad minim </p>
+  
+        <a href="#" class="latest__more" tabindex="-1">
+          Read more
+          <svg class="u-icon">
+            <use xlink:href="assets/icons.svg#icon-long-arrow-right" />
+          </svg>
+        </a>
+      </div>
+  
+      <div class="latest__item">
+        <a href="#" class="latest__image-wrap" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/latest/pic-01.jpg" alt="" class="latest__image">
+        </a>
+  
+        <h3 class="latest__title">
+          <a href="#" tabindex="-1">Eiusmod tempor labore aliqua</a>
+        </h3>
+  
+        <p class="latest__date">18 August 2016</p>
+  
+        <p class="latest__text">Lorem ipsum dolor sit amet, adipisicing elit, sed labore et dolore magna aliqua. Ut enim ad minim </p>
+  
+        <a href="#" class="latest__more" tabindex="-1">
+          Read more
+          <svg class="u-icon">
+            <use xlink:href="assets/icons.svg#icon-long-arrow-right" />
+          </svg>
+        </a>
+      </div>
+  
+      <div class="latest__item">
+        <a href="#" class="latest__image-wrap" tabindex="-1" aria-hidden="true">
+          <img src="assets/img/latest/pic-01.jpg" alt="" class="latest__image">
+        </a>
+  
+        <h3 class="latest__title">
+          <a href="#" tabindex="-1">Eiusmod tempor labore aliqua</a>
+        </h3>
+  
+        <p class="latest__date">18 August 2016</p>
+  
+        <p class="latest__text">Lorem ipsum dolor sit amet, adipisicing elit, sed labore et dolore magna aliqua. Ut enim ad minim </p>
+  
+        <a href="#" class="latest__more" tabindex="-1">
+          Read more
+          <svg class="u-icon">
+            <use xlink:href="assets/icons.svg#icon-long-arrow-right" />
+          </svg>
+        </a>
+      </div>
+  
+    </div>
+  
+    <div class="latest__read-wrap">
+      <a href="#" class="latest__read btn btn--outlined">Read blog</a>
+    </div>
+  
+  </section>
+  
+  <section class="l-section contact" id="contact">
+  
+    <div class="box-title l-content-m">
+      <h2 class="box-title__heading">Keep in touch</h2>
+      <div class="box-title__caption">An eye for detail makes our works beautiful.</div>
+    </div>
+  
+    <form class="l-content-m" action="/" method="GET">
+  
+      <div class="contact__form-name">
+  
+        <input
+          type="text"
+          class="form__control contact__field"
+          name="first_name"
+          placeholder="First name"
+          required
+          aria-label="First name"
+        >
+  
+        <input
+          type="text"
+          class="form__control contact__field"
+          name="last_name"
+          id="last_name"
+          placeholder="Last name"
+          aria-label="Last name"
+          required
+        >
+  
+      </div>
+  
+      <input
+        type="email"
+        class="form__control contact__field"
+        name="email"
+        id="email"
+        placeholder="Email Address"
+        aria-label="Email Address"
+        required
+      >
+  
+      <textarea
+        name="message"
+        id="message"
+        rows="7"
+        class="form__control contact__field"
+        aria-label="Message"
+        placeholder="Message"
+        required
+      ></textarea>
+  
+      <div class="contact__submit">
+        <button type="submit" class="btn btn--fill">Send Message</button>
+      </div>
+  
+    </form>
+  
+  </section>
+  
+  </main>
+
+  <footer class="footer">
+  
+    <ul class="footer__socials">
+  
+      <li class="footer__socials-item">
+        <a href="/">
+          <svg class="u-icon" aria-hidden="true">
+            <use xlink:href="assets/icons.svg#icon-facebook" />
+          </svg>
+          <span class="footer__social-label">Facebook</span>
+        </a>
+      </li>
+  
+      <li class="footer__socials-item">
+        <a href="/">
+          <svg class="u-icon" aria-hidden="true">
+            <use xlink:href="assets/icons.svg#icon-twitter" />
+          </svg>
+          <span class="footer__social-label">Twitter</span>
+        </a>
+      </li>
+  
+      <li class="footer__socials-item">
+        <a href="/">
+          <svg class="u-icon" aria-hidden="true">
+            <use xlink:href="assets/icons.svg#icon-instagram" />
+          </svg>
+          <span class="footer__social-label">Instagram</span>
+        </a>
+      </li>
+  
+      <li class="footer__socials-item">
+        <a href="/">
+          <svg class="u-icon" aria-hidden="true">
+            <use xlink:href="assets/icons.svg#icon-google-plus" />
+          </svg>
+          <span class="footer__social-label">Google plus</span>
+        </a>
+      </li>
+  
+    </ul>
+  
+    <div class="footer__copy">
+      © 2016 krunch Landing Page, Made by
+      <a href="/">Shuvo</a>
+    </div>
+  
+  </footer>
+  
+
+  <script src="assets/js/index.js"></script>
+
+</body>
+</html>
